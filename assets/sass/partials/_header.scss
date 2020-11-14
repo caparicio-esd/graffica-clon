@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    justify-content: center;
+    @include anchor_inherit;
+    padding: 0 0 .5rem;
+    box-shadow: 0 0 0 .25px black;
+
+    .header_content {
+        width: 100%;
+        max-width: $web_width;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .header_brand {
+            margin: 3rem 0;
+
+            img {}
+        }
+
+        .header_navigation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .main_navigation {
+                margin-left: auto;
+
+                ul {
+                    @include menu_inline;
+
+                    li {
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        a {
+                            padding: .5rem;
+                        }
+                    }
+                }
+            }
+
+            .checkout {
+                margin-left: auto;
+                margin-right: 1rem;
+            }
+
+            .search {}
+
+            .checkout,
+            .search {
+                a {
+
+                    padding: .5rem;
+                }
+            }
+        }
+    }
+}
